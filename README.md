@@ -24,6 +24,6 @@ yarn start
 
 ## Change Polygon network
 
-To change the Polygon network from test net, modify the `REACT_APP_CHAIN_ID` value in `.env`.
+To change the BullChain network from test net, modify the `REACT_APP_CHAIN_ID` value in `.env`.
 
-- MAIN NET `137`
+- MAIN NET `911`
