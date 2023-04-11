@@ -4,17 +4,15 @@ import { AbstractConnector } from '@web3-react/abstract-connector'
 // import { bsc, fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
 import { injected, bsc } from '../connectors'
 // TODO
-export const ROUTER_ADDRESS = '0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff'
+export const ROUTER_ADDRESS = '0xF09Eb46eEA60aBe264e510CBA67046cF1Ae27B17'
 
 // a list of tokens by chain
 type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const DAI = new Token(ChainId.MAINNET, '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063', 18, 'DAI', 'Dai Stablecoin')
-export const USDC = new Token(ChainId.MAINNET, '0x2791bca1f2de4661ed88a30c99a7a9449aa84174', 6, 'USDC', 'USD Coin')
-export const USDT = new Token(ChainId.MAINNET, '0xc2132d05d31c914a87c6611c10748aeb04b58e8f', 6, 'USDT', 'Tether USD')
-export const ETH = new Token(ChainId.MAINNET, '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619', 18, 'WETH', 'Wrapped Ether')
+export const DAI = new Token(ChainId.MAINNET, '0x8db97c7cece249c2b98bdc0226cc4c2a57bf52fc', 18, 'BC', 'BullChain Token')
+export const BCUSDT = new Token(ChainId.MAINNET, '0x88Da55CE7185Fd86a2C15FE93b05F84E25cFeEB1', 18, 'BCUSDT', 'BCUSDT Coin')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -49,11 +47,11 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [
-      new Token(ChainId.MAINNET, '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82', 18, 'CAKE', 'PancakeSwap Token'),
-      new Token(ChainId.MAINNET, '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270', 18, 'WMATIC', 'Wrapped Matic')
+      new Token(ChainId.MAINNET, '0x8db97c7cece249c2b98bdc0226cc4c2a57bf52fc', 18, 'BC', 'BullChain'),
+      new Token(ChainId.MAINNET, '0x88Da55CE7185Fd86a2C15FE93b05F84E25cFeEB1', 18, 'BCUSDT', 'BCUSDT')
     ],
-    [USDC, USDT],
-    [DAI, USDT]
+    [BC, BCUSDT],
+    [BC, BCUSDT]
   ]
 }
 
