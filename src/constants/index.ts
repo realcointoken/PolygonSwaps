@@ -12,7 +12,7 @@ type ChainTokenList = {
 }
 
 export const DAI = new Token(ChainId.MAINNET, '0x8db97c7cece249c2b98bdc0226cc4c2a57bf52fc', 18, 'BC', 'BullChain Token')
-export const BCUSDT = new Token(ChainId.MAINNET, '0x88Da55CE7185Fd86a2C15FE93b05F84E25cFeEB1', 18, 'BCUSDT', 'BCUSDT Coin')
+export const BCUSDT = new Token(ChainId.MAINNET, '0x88Da55CE7185Fd86a2C15FE93b05F84E25cFeEB1', 18, 'BCUSDT', 'BCUSDT')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -22,7 +22,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], BCUSDT]
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], BCUSDT, USDC]
 }
 
 /**
